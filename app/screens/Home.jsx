@@ -7,9 +7,7 @@ const Home = () => {
   return (
     <View style={styles.container}>
       <Header />
-
       <NavBar />
-
       <StatusBar style="auto" />
     </View>
   );

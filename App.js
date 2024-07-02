@@ -7,6 +7,7 @@ import OnboardingScreen from "./app/screens/onboarding/OnboardingScreen";
 import Home from "./app/screens/Home";
 import { createStackNavigator } from "@react-navigation/stack";
 
+
 export default function App() {
   // const [loading, setLoading] = useState(true);
   const [user, setUser] = useState(null);
@@ -16,14 +17,18 @@ export default function App() {
     return <Home />;
   } else {
     return (
-      <NavigationContainer>
-        <Stack.Navigator>
-          <Stack.Screen name="Onboarding" component={OnboardingScreen} />
-          <Stack.Screen name="Login" extraData={setUser} component={LoginScreen} />
-          <Stack.Screen name="Registration" component={RegistrationScreen} />
-          <Stack.Screen name="Home" component={Home} />
-        </Stack.Navigator>
-      </NavigationContainer>
+        <NavigationContainer>
+          <Stack.Navigator>
+            <Stack.Screen name="Onboarding" component={OnboardingScreen} />
+            <Stack.Screen
+              name="Login"
+              extraData={setUser}
+              component={LoginScreen}
+            />
+            <Stack.Screen name="Registration" component={RegistrationScreen} />
+            <Stack.Screen name="Home" component={Home} />
+          </Stack.Navigator>
+        </NavigationContainer>
     );
   }
 }
