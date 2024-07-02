@@ -1,18 +1,29 @@
 import { StyleSheet, Text, View, Image } from 'react-native'
 import React from 'react'
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import Job from '../screens/Job'
+import Jobs from '../screens/Jobs'
 import MyStuff from '../screens/MyStuff'
 import Message from '../screens/Message'
 import { MaterialCommunityIcons } from "@expo/vector-icons";
+import Chat from '../screens/Chat';
+import { createStackNavigator } from "@react-navigation/stack";
 
+const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
+
+const MessageStack = ({ navigation }) => (
+  <Stack.Navigator screenOptions={{ headerShown: false }} style={styles.stackBar}>
+    <Stack.Screen name="Messages" component={Message} />
+    <Stack.Screen name="Chat" component={Chat} />
+  </Stack.Navigator>
+);
+
 export default function NavBar() {
   return (
     <Tab.Navigator screenOptions={{ headerShown: false }}>
       <Tab.Screen
         name="Jobs"
-        component={Job}
+        component={Jobs}
         options={{
           tabBarLabel: ({ color }) => (
             <Text
@@ -51,7 +62,7 @@ export default function NavBar() {
       />
       <Tab.Screen
         name="Message"
-        component={Message}
+        component={MessageStack}
         options={{
           tabBarLabel: ({ color }) => (
             <Text style={{ color: color, fontSize: 12 }}>Message</Text>
@@ -70,5 +81,5 @@ export default function NavBar() {
 }
 
 const styles = StyleSheet.create({
-   
+
 })

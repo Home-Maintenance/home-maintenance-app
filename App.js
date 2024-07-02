@@ -1,10 +1,10 @@
+import "react-native-gesture-handler";
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import { NavigationContainer } from "@react-navigation/native";
 import NavBar from "./app/Navigations/NavBar";
-import Header from './app/screens/Header'
-
+import Header from "./app/screens/Header";
 
 export default function App() {
   // const [loading, setLoading] = useState(true);
@@ -13,9 +13,9 @@ export default function App() {
   return (
     <SafeAreaProvider>
       <View style={styles.container}>
-        <Header/>
+        <Header />
         <NavigationContainer>
-        <NavBar/>
+          <NavBar />
         </NavigationContainer>
         <StatusBar style="auto" />
       </View>

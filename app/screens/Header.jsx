@@ -10,7 +10,7 @@ import React, { useState } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import Colors from "../Util/Colors";
 import { FontAwesome } from "@expo/vector-icons";
-import FontAwesome6 from "@expo/vector-icons/FontAwesome6";
+import { setStatusBarTranslucent } from "expo-status-bar";
 
 export default function Header() {
   const [search, setSearch] = useState ('')
@@ -96,10 +96,10 @@ const styles = StyleSheet.create({
     borderWidth: 2,
     borderColor: Colors.white,
   },
-  logoImage:{
-    width:35,
+  logoImage: {
+    width: 35,
     height: 35,
     borderRadius: 10,
   },
-
+ 
 });
