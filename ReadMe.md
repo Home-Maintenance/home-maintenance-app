@@ -69,23 +69,6 @@ Ensure you have the following versions installed:
 - Enhancing user profiles with more detailed information.
 - Implementing push notifications for real-time updates.
 
-## Contributing
-
-1. Fork the repository.
-2. Create a new branch:
-    ```sh
-    git checkout -b feature-name
-    ```
-3. Make your changes.
-4. Commit your changes:
-    ```sh
-    git commit -m 'Add feature'
-    ```
-5. Push to the branch:
-    ```sh
-    git push origin feature-name
-    ```
-6. Create a pull request.
 
 ## Acknowledgements
 
